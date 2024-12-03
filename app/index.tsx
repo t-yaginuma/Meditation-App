@@ -1,18 +1,20 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
+import React from "react";
+import beachImage from "@/assets/meditation-images/beach.webp";
 import "../global.css";
 
-export default function HomeScreen() {
+const index = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello world</Text>
+    <View className="flex-1 h-full">
+      <ImageBackground
+        source={beachImage}
+        resizeMode="cover"
+        className="flex-1 h-full"
+      >
+        <Text>index</Text>
+      </ImageBackground>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+export default index;
